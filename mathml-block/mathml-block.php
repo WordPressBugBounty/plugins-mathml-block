@@ -2,9 +2,9 @@
 /**
  * Plugin Name:       MathML block
  * Description:       Display MathML formulas.
- * Version:           1.2.2
+ * Version:           1.2.3
  * Requires at least: 5.0
- * Tested up to:      6.1
+ * Tested up to:      6.8
  * Requires PHP:      5.6
  * Stable tag:        trunk
  * Author:            adamsilverstein
@@ -209,3 +209,12 @@ function filter_content( $content ) {
 	);
 }
 add_filter( 'the_content', __NAMESPACE__ . '\filter_content', 20 );
+
+/**
+ * Enable the mathml inline tag for users without the unfiltered_html capability.
+ */
+function enable_mathml_in_wp_kses( $allowed_tags ) {
+	$allowed_tags[ 'mathml' ] = array();
+	return $allowed_tags;
+}
+add_filter( 'wp_kses_allowed_html', __NAMESPACE__ . '\enable_mathml_in_wp_kses' );

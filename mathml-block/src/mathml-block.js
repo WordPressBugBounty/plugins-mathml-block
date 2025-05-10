@@ -1,4 +1,5 @@
 import { v4 as uuid } from 'uuid';
+import icon from './icon';
 
 const { __ }                = wp.i18n;
 const { registerBlockType } = wp.blocks;
@@ -11,7 +12,7 @@ const renderMathML = ( id ) => {
 
 registerBlockType( 'mathml/mathmlblock', {
 	title: 'MathML',
-	icon: 'list-view',
+	icon,
 	category: 'common',
 	attributes: {
 		formula: {
@@ -36,7 +37,7 @@ registerBlockType( 'mathml/mathmlblock', {
 					<textarea
 						id={ id }
 						className="mathml-formula"
-						tagname="div"
+						data-tagname="div"
 						onChange={ ( event ) => {
 							setAttributes( { formula: event.target.value } );
 						} }
@@ -67,5 +68,3 @@ registerBlockType( 'mathml/mathmlblock', {
 		);
 	},
 } );
-
-
