@@ -4,16 +4,22 @@ Author URI: http://tunedin.net.com
 Plugin URI: https://github.com/adamsilverstein/mathml-block
 Tags: MathML, Gutenberg, Block, math, block editor
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 7.2
 Requires PHP: 5.6
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mathml-block
 
-A MathML block for the WordPress block editor (Gutenberg).
+A MathML block for the WordPress block editor (Gutenberg). No longer maintained - WordPress core now includes a Math block.
 
 == Description ==
+
+**This plugin is no longer maintained and will not receive further updates.**
+
+WordPress core now includes its own Math block (`core/math`), present in WordPress 7.0 and later, which covers the same ground: it renders mathematical notation written as LaTeX, and stores the rendered MathML alongside it. Anyone using this plugin is encouraged to move to the core Math block.
+
+Version 1.2.4 is the final release. No further compatibility, bug fix, or security updates are planned.
 
 A MathML block for the WordPress block editor (Gutenberg).
 Requires PHP 5.4+ and WordPress 5.0+.
@@ -49,6 +55,10 @@ To test using math formulas inline, type an formula into a block of text, select
 3. Use the MathML block!
 
 == Changelog ==
+
+= 1.2.4 =
+Final release. This plugin is no longer maintained; WordPress core now includes a Math block (`core/math`).
+Tested up to 7.2.
 
 = 1.2.3 =
 Tested up to 6.8.
